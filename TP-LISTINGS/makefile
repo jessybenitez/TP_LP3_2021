@@ -13,6 +13,12 @@ bin/capitulo_4/4.8/myprog25 bin/capitulo_4/4.9/myprog26\
 bin/capitulo_4/4.10/myprog27 bin/capitulo_4/4.11/myprog28\
 bin/capitulo_4/4.12/myprog29 bin/capitulo_4/4.13/myprog30\
 bin/capitulo_4/4.14/myprog31 bin/capitulo_4/4.15/myprog32\
+bin/capitulo_5/5.1/myprog33 bin/capitulo_5/5.2/myprog34\
+bin/capitulo_5/5.3/myprog35 bin/capitulo_5/5.4/myprog36\
+bin/capitulo_5/5.5/myprog37 bin/capitulo_5/5.6/myprog38\
+bin/capitulo_5/5.7/myprog39 bin/capitulo_5/5.8/myprog40\
+bin/capitulo_5/5.9/myprog41 bin/capitulo_5/5.10/myprog42\
+bin/capitulo_5/5.11/myprog43 bin/capitulo_5/5.12/myprog44\
 
 
 #listing1.1 1.2 1.3
@@ -239,3 +245,87 @@ bin/capitulo_4/4.15/myprog32: src/capitulo_4/4.15/thread-pid.o
 
 src/capitulo_4/4.15/thread-pid.o: src/capitulo_4/4.15/thread-pid.c      
 	gcc -c src/capitulo_4/4.15/thread-pid.c -o src/capitulo_4/4.15/thread-pid.o
+
+#listing5.1
+bin/capitulo_5/5.1/myprog33: src/capitulo_5/5.1/shm.o
+	gcc src/capitulo_5/5.1/shm.o -o bin/capitulo_5/5.1/myprog33 -lpthread
+
+src/capitulo_5/5.1/shm.o: src/capitulo_5/5.1/shm.c      
+	gcc -c src/capitulo_5/5.1/shm.c -o src/capitulo_5/5.1/shm.o
+
+#listing5.2
+bin/capitulo_5/5.2/myprog34: src/capitulo_5/5.2/sem_all_deall.o
+	gcc src/capitulo_5/5.2/sem_all_deall.o -o bin/capitulo_5/5.2/myprog34 -lpthread
+
+src/capitulo_5/5.2/sem_all_deall.o: src/capitulo_5/5.2/sem_all_deall.c      
+	gcc -c src/capitulo_5/5.2/sem_all_deall.c -o src/capitulo_5/5.2/sem_all_deall.o
+
+#listing5.3
+bin/capitulo_5/5.3/myprog35: src/capitulo_5/5.3/sem_init.o
+	gcc src/capitulo_5/5.3/sem_init.o -o bin/capitulo_5/5.3/myprog35 -lpthread
+
+src/capitulo_5/5.3/sem_init.o: src/capitulo_5/5.3/sem_init.c      
+	gcc -c src/capitulo_5/5.3/sem_init.c -o src/capitulo_5/5.3/sem_init.o
+
+#listing5.4
+bin/capitulo_5/5.4/myprog36: src/capitulo_5/5.4/sem_pv.o
+	gcc src/capitulo_5/5.4/sem_pv.o -o bin/capitulo_5/5.4/myprog36 -lpthread
+
+src/capitulo_5/5.4/sem_pv.o: src/capitulo_5/5.4/sem_pv.c      
+	gcc -c src/capitulo_5/5.4/sem_pv.c -o src/capitulo_5/5.4/sem_pv.o
+
+#listing5.5
+bin/capitulo_5/5.5/myprog37: src/capitulo_5/5.5/mmap-write.o
+	gcc src/capitulo_5/5.5/mmap-write.o -o bin/capitulo_5/5.5/myprog37 -lpthread
+
+src/capitulo_5/5.5/mmap-write.o: src/capitulo_5/5.5/mmap-write.c      
+	gcc -c src/capitulo_5/5.5/mmap-write.c -o src/capitulo_5/5.5/mmap-write.o
+
+#listing5.6
+bin/capitulo_5/5.6/myprog38: src/capitulo_5/5.6/mmap-read.o
+	gcc src/capitulo_5/5.6/mmap-read.o -o bin/capitulo_5/5.6/myprog38 -lpthread
+
+src/capitulo_5/5.6/mmap-read.o: src/capitulo_5/5.6/mmap-read.c      
+	gcc -c src/capitulo_5/5.6/mmap-read.c -o src/capitulo_5/5.6/mmap-read.o
+
+#listing5.7
+bin/capitulo_5/5.7/myprog39: src/capitulo_5/5.7/pipe.o
+	gcc src/capitulo_5/5.7/pipe.o -o bin/capitulo_5/5.7/myprog39 -lpthread
+
+src/capitulo_5/5.7/pipe.o: src/capitulo_5/5.7/pipe.c      
+	gcc -c src/capitulo_5/5.7/pipe.c -o src/capitulo_5/5.7/pipe.o
+
+#listing5.8
+bin/capitulo_5/5.8/myprog40: src/capitulo_5/5.8/dup2.o
+	gcc src/capitulo_5/5.8/dup2.o -o bin/capitulo_5/5.8/myprog40 -lpthread
+
+src/capitulo_5/5.8/dup2.o: src/capitulo_5/5.8/dup2.c      
+	gcc -c src/capitulo_5/5.8/dup2.c -o src/capitulo_5/5.8/dup2.o	
+
+#listing5.9
+bin/capitulo_5/5.9/myprog41: src/capitulo_5/5.9/popen.o
+	gcc src/capitulo_5/5.9/popen.o -o bin/capitulo_5/5.9/myprog41 -lpthread
+
+src/capitulo_5/5.9/popen.o: src/capitulo_5/5.9/popen.c      
+	gcc -c src/capitulo_5/5.9/popen.c -o src/capitulo_5/5.9/popen.o
+
+#listing5.10
+bin/capitulo_5/5.10/myprog42: src/capitulo_5/5.10/socket-server.o
+	gcc src/capitulo_5/5.10/socket-server.o -o bin/capitulo_5/5.10/myprog42 -lpthread
+
+src/capitulo_5/5.10/socket-server.o: src/capitulo_5/5.10/socket-server.c      
+	gcc -c src/capitulo_5/5.10/socket-server.c -o src/capitulo_5/5.10/socket-server.o
+
+#listing5.11
+bin/capitulo_5/5.11/myprog43: src/capitulo_5/5.11/socket-client.o
+	gcc src/capitulo_5/5.11/socket-client.o -o bin/capitulo_5/5.11/myprog43 -lpthread
+
+src/capitulo_5/5.11/socket-client.o: src/capitulo_5/5.11/socket-client.c      
+	gcc -c src/capitulo_5/5.11/socket-client.c -o src/capitulo_5/5.11/socket-client.o
+
+#listing5.12
+bin/capitulo_5/5.12/myprog44: src/capitulo_5/5.12/socket-inet.o
+	gcc src/capitulo_5/5.12/socket-inet.o -o bin/capitulo_5/5.12/myprog44 -lpthread
+
+src/capitulo_5/5.12/socket-inet.o: src/capitulo_5/5.12/socket-inet.c      
+	gcc -c src/capitulo_5/5.12/socket-inet.c -o src/capitulo_5/5.12/socket-inet.o

@@ -17,3 +17,8 @@ int binary_semaphore_initialize(int semid){
 	argument.array=values;
 	return semctl(semid,0,SETALL,argument);
 }
+
+int main(){
+	/*completar*/
+	return 0;
+}

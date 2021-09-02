@@ -18,3 +18,8 @@ int binary_semaphore_deallocate(int semid){
 	union semun ignored_argument;
 	return semctl(semid,1,IPC_RMID,ignored_argument);
 }
+
+int main(){
+	/*completar*/
+	return 0;
+}
