@@ -331,47 +331,46 @@ src/capitulo_5/5.12/socket-inet.o: src/capitulo_5/5.12/socket-inet.c
 	gcc -c src/capitulo_5/5.12/socket-inet.c -o src/capitulo_5/5.12/socket-inet.o
 
 clean:
-	rm -f *.o src/capitulo_1/main.o
-	rm -f *.o src/capitulo_1/reciprocal.o
-	rm -f *.o src/capitulo_2/2.1/main2.o 
-	rm -f *.o src/capitulo_2/2.2/getopt_long.o
-	rm -f *.o src/capitulo_2/2.3/print-env.o 
-	rm -f *.o src/capitulo_2/2.4/client.o
-	rm -f *.o src/capitulo_2/2.5/temp_file.o 
-	rm -f *.o src/capitulo_2/2.6/readfile.o
-	rm -f *.o src/capitulo_2/2.9/tifftest.o 
-	rm -f *.o src/capitulo_3/3.1/print-pid.o
-	rm -f *.o src/capitulo_3/3.2/readfile.o 
-	rm -f *.o src/capitulo_3/3.3/fork.o
-	rm -f *.o src/capitulo_3/3.4/fork-exec.o 
-	rm -f *.o src/capitulo_3/3.5/sigusr1.o
-	rm -f *.o src/capitulo_3/3.6/zombie.o 
-	rm -f *.o src/capitulo_3/3.7/sigchld.o
-	rm -f *.o src/capitulo_4/4.1/thread-create.o 
-	rm -f *.o src/capitulo_4/4.2/thread-create2.o
-	rm -f *.o src/capitulo_4/4.3/revised4.2.o 
-	rm -f *.o src/capitulo_4/4.4/primes.o
-	rm -f *.o src/capitulo_4/4.5/detached.o 
-	rm -f *.o src/capitulo_4/4.6/critical-section.o
-	rm -f *.o src/capitulo_4/4.7/tsd.o 
-	rm -f *.o src/capitulo_4/4.8/cleanup.o
-	rm -f *.o src/capitulo_4/4.9/cxx-exit.o 
-	rm -f *.o src/capitulo_4/4.10/job-queue1.o
-	rm -f *.o src/capitulo_4/4.11/job-queue2.o 
-	rm -f *.o src/capitulo_4/4.12/job-queue3.o
-	rm -f *.o src/capitulo_4/4.13/spin-condvar.o 
-	rm -f *.o src/capitulo_4/4.14/condvar.o
-	rm -f *.o src/capitulo_4/4.15/thread-pid.o 
-	rm -f *.o src/capitulo_5/5.1/shm.o
-	rm -f *.o src/capitulo_5/5.2/sem_all_deall.o 
-	rm -f *.o src/capitulo_5/5.3/sem_init.o
-	rm -f *.o src/capitulo_5/5.4/sem_pv.o 
-	rm -f *.o src/capitulo_5/5.5/mmap-write.o
-	rm -f *.o src/capitulo_5/5.6/mmap-read.o
-	rm -f *.o src/capitulo_5/5.7/pipe.o
-	rm -f *.o src/capitulo_5/5.8/dup2.o 
-	rm -f *.o src/capitulo_5/5.9/popen.o
-	rm -f *.o src/capitulo_5/5.10/socket-server.o
-	rm -f *.o src/capitulo_5/5.11/socket-client.o
-	rm -f *.o src/capitulo_5/5.12/socket-inet.o
+	rm bin/capitulo_1/myprog1
+	rm bin/capitulo_2/2.1/myprog2
+	rm bin/capitulo_2/2.2/myprog3
+	rm bin/capitulo_2/2.3/myprog4
+	rm bin/capitulo_2/2.4/myprog5
+	rm bin/capitulo_2/2.5/myprog6
+	rm bin/capitulo_2/2.6/myprog7 
+	rm bin/capitulo_2/2.9/myprog10
+	rm bin/capitulo_3/3.1/myprog11
+	rm bin/capitulo_3/3.2/myprog12
+	rm bin/capitulo_3/3.3/myprog13 
+	rm bin/capitulo_3/3.4/myprog14
+	rm bin/capitulo_3/3.5/myprog15
+	rm bin/capitulo_3/3.6/myprog16
+	rm bin/capitulo_3/3.7/myprog17
+	rm bin/capitulo_4/4.1/myprog18
+	rm bin/capitulo_4/4.2/myprog19
+	rm bin/capitulo_4/4.3/myprog20
+	rm bin/capitulo_4/4.4/myprog21
+	rm bin/capitulo_4/4.5/myprog22
+	rm bin/capitulo_4/4.6/myprog23 
+	rm bin/capitulo_4/4.7/myprog24
+	rm bin/capitulo_4/4.8/myprog25 
+	rm bin/capitulo_4/4.9/myprog26
+	rm bin/capitulo_4/4.10/myprog27
+	rm bin/capitulo_4/4.11/myprog28
+	rm bin/capitulo_4/4.12/myprog29 
+	rm bin/capitulo_4/4.13/myprog30
+	rm bin/capitulo_4/4.14/myprog31 
+	rm bin/capitulo_4/4.15/myprog32
+	rm bin/capitulo_5/5.1/myprog33
+	rm bin/capitulo_5/5.2/myprog34
+	rm bin/capitulo_5/5.3/myprog35 
+	rm bin/capitulo_5/5.4/myprog36
+	rm bin/capitulo_5/5.5/myprog37 
+	rm bin/capitulo_5/5.6/myprog38
+	rm bin/capitulo_5/5.7/myprog39
+	rm bin/capitulo_5/5.8/myprog40
+	rm bin/capitulo_5/5.9/myprog41 
+	rm bin/capitulo_5/5.10/myprog42
+	rm bin/capitulo_5/5.11/myprog43
+	rm bin/capitulo_5/5.12/myprog44
 	
