@@ -6,6 +6,13 @@ bin/capitulo_3/3.1/myprog11 bin/capitulo_3/3.2/myprog12 \
 bin/capitulo_3/3.3/myprog13 bin/capitulo_3/3.4/myprog14\
 bin/capitulo_3/3.5/myprog15 bin/capitulo_3/3.6/myprog16\
 bin/capitulo_3/3.7/myprog17 bin/capitulo_4/4.1/myprog18\
+bin/capitulo_4/4.2/myprog19 bin/capitulo_4/4.3/myprog20\
+bin/capitulo_4/4.4/myprog21 bin/capitulo_4/4.5/myprog22\
+bin/capitulo_4/4.6/myprog23 bin/capitulo_4/4.7/myprog24\
+bin/capitulo_4/4.8/myprog25 bin/capitulo_4/4.9/myprog26\
+bin/capitulo_4/4.10/myprog27 bin/capitulo_4/4.11/myprog28\
+bin/capitulo_4/4.12/myprog29 bin/capitulo_4/4.13/myprog30\
+bin/capitulo_4/4.14/myprog31 bin/capitulo_4/4.15/myprog32\
 
 
 #listing1.1 1.2 1.3
@@ -134,3 +141,101 @@ bin/capitulo_4/4.1/myprog18: src/capitulo_4/4.1/thread-create.o
 
 src/capitulo_4/4.1/thread-create.o: src/capitulo_4/4.1/thread-create.c      
 	gcc -c src/capitulo_4/4.1/thread-create.c -o src/capitulo_4/4.1/thread-create.o
+
+#listing4.2
+bin/capitulo_4/4.2/myprog19: src/capitulo_4/4.2/thread-create2.o
+	gcc src/capitulo_4/4.2/thread-create2.o -o bin/capitulo_4/4.2/myprog19 -lpthread
+
+src/capitulo_4/4.2/thread-create2.o: src/capitulo_4/4.2/thread-create2.c      
+	gcc -c src/capitulo_4/4.2/thread-create2.c -o src/capitulo_4/4.2/thread-create2.o
+
+#listing4.3
+bin/capitulo_4/4.3/myprog20: src/capitulo_4/4.3/revised4.2.o
+	gcc src/capitulo_4/4.3/revised4.2.o -o bin/capitulo_4/4.3/myprog20 -lpthread
+
+src/capitulo_4/4.3/revised4.2.o: src/capitulo_4/4.3/revised4.2.c      
+	gcc -c src/capitulo_4/4.3/revised4.2.c -o src/capitulo_4/4.3/revised4.2.o	
+
+#listing4.4
+bin/capitulo_4/4.4/myprog21: src/capitulo_4/4.4/primes.o
+	gcc src/capitulo_4/4.4/primes.o -o bin/capitulo_4/4.4/myprog21 -lpthread
+
+src/capitulo_4/4.4/primes.o: src/capitulo_4/4.4/primes.c      
+	gcc -c src/capitulo_4/4.4/primes.c -o src/capitulo_4/4.4/primes.o
+
+#listing4.5
+bin/capitulo_4/4.5/myprog22: src/capitulo_4/4.5/detached.o
+	gcc src/capitulo_4/4.5/detached.o -o bin/capitulo_4/4.5/myprog22 -lpthread
+
+src/capitulo_4/4.5/detached.o: src/capitulo_4/4.5/detached.c      
+	gcc -c src/capitulo_4/4.5/detached.c -o src/capitulo_4/4.5/detached.o
+
+#listing4.6
+bin/capitulo_4/4.6/myprog23: src/capitulo_4/4.6/critical-section.o
+	gcc src/capitulo_4/4.6/critical-section.o -o bin/capitulo_4/4.6/myprog23 -lpthread
+
+src/capitulo_4/4.6/critical-section.o: src/capitulo_4/4.6/critical-section.c      
+	gcc -c src/capitulo_4/4.6/critical-section.c -o src/capitulo_4/4.6/critical-section.o
+
+#listing4.7
+bin/capitulo_4/4.7/myprog24: src/capitulo_4/4.7/tsd.o
+	gcc src/capitulo_4/4.7/tsd.o -o bin/capitulo_4/4.7/myprog24 -lpthread
+
+src/capitulo_4/4.7/tsd.o: src/capitulo_4/4.7/tsd.c      
+	gcc -c src/capitulo_4/4.7/tsd.c -o src/capitulo_4/4.7/tsd.o
+
+#listing4.8
+bin/capitulo_4/4.8/myprog25: src/capitulo_4/4.8/cleanup.o
+	gcc src/capitulo_4/4.8/cleanup.o -o bin/capitulo_4/4.8/myprog25 -lpthread
+
+src/capitulo_4/4.8/cleanup.o: src/capitulo_4/4.8/cleanup.c      
+	gcc -c src/capitulo_4/4.8/cleanup.c -o src/capitulo_4/4.8/cleanup.o
+
+#listing4.9
+bin/capitulo_4/4.9/myprog26: src/capitulo_4/4.9/cxx-exit.o
+	g++ src/capitulo_4/4.9/cxx-exit.o -o bin/capitulo_4/4.9/myprog26 -lpthread
+
+src/capitulo_4/4.9/cxx-exit.o: src/capitulo_4/4.9/cxx-exit.cpp      
+	g++ -c src/capitulo_4/4.9/cxx-exit.cpp -o src/capitulo_4/4.9/cxx-exit.o
+
+#listing4.10
+bin/capitulo_4/4.10/myprog27: src/capitulo_4/4.10/job-queue1.o
+	gcc src/capitulo_4/4.10/job-queue1.o -o bin/capitulo_4/4.10/myprog27 -lpthread
+
+src/capitulo_4/4.10/job-queue1.o: src/capitulo_4/4.10/job-queue1.c      
+	gcc -c src/capitulo_4/4.10/job-queue1.c -o src/capitulo_4/4.10/job-queue1.o
+
+#listing4.11
+bin/capitulo_4/4.11/myprog28: src/capitulo_4/4.11/job-queue2.o
+	gcc src/capitulo_4/4.11/job-queue2.o -o bin/capitulo_4/4.11/myprog28 -lpthread
+
+src/capitulo_4/4.11/job-queue2.o: src/capitulo_4/4.11/job-queue2.c      
+	gcc -c src/capitulo_4/4.11/job-queue2.c -o src/capitulo_4/4.11/job-queue2.o
+
+#listing4.12
+bin/capitulo_4/4.12/myprog29: src/capitulo_4/4.12/job-queue3.o
+	gcc src/capitulo_4/4.12/job-queue3.o -o bin/capitulo_4/4.12/myprog29 -lpthread
+
+src/capitulo_4/4.12/job-queue3.o: src/capitulo_4/4.12/job-queue3.c      
+	gcc -c src/capitulo_4/4.12/job-queue3.c -o src/capitulo_4/4.12/job-queue3.o
+
+#listing4.13
+bin/capitulo_4/4.13/myprog30: src/capitulo_4/4.13/spin-condvar.o
+	gcc src/capitulo_4/4.13/spin-condvar.o -o bin/capitulo_4/4.13/myprog30 -lpthread
+
+src/capitulo_4/4.13/spin-condvar.o: src/capitulo_4/4.13/spin-condvar.c      
+	gcc -c src/capitulo_4/4.13/spin-condvar.c -o src/capitulo_4/4.13/spin-condvar.o
+
+#listing4.14
+bin/capitulo_4/4.14/myprog31: src/capitulo_4/4.14/condvar.o
+	gcc src/capitulo_4/4.14/condvar.o -o bin/capitulo_4/4.14/myprog31 -lpthread
+
+src/capitulo_4/4.14/condvar.o: src/capitulo_4/4.14/condvar.c      
+	gcc -c src/capitulo_4/4.14/condvar.c -o src/capitulo_4/4.14/condvar.o
+
+#listing4.15
+bin/capitulo_4/4.15/myprog32: src/capitulo_4/4.15/thread-pid.o
+	gcc src/capitulo_4/4.15/thread-pid.o -o bin/capitulo_4/4.15/myprog32 -lpthread
+
+src/capitulo_4/4.15/thread-pid.o: src/capitulo_4/4.15/thread-pid.c      
+	gcc -c src/capitulo_4/4.15/thread-pid.c -o src/capitulo_4/4.15/thread-pid.o
