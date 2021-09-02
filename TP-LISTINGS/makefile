@@ -374,9 +374,10 @@ clean:
 	rm bin/capitulo_5/5.11/myprog43
 	rm bin/capitulo_5/5.12/myprog44\
 
+listing-3.1:bin/capitulo_3/3.1/listing-3.1
 
-listing-3.1:src/capitulo_3/3.1/print-pid2.o
-	gcc src/capitulo_3/3.1/print-pid2.o -o listing-3.1
+bin/capitulo_3/3.1/listing-3.1:src/capitulo_3/3.1/print-pid2.o
+	gcc src/capitulo_3/3.1/print-pid2.o -o bin/capitulo_3/3.1/listing-3.1
 
 src/capitulo_3/3.1/print-pid2.o: src/capitulo_3/3.1/print-pid.c
 	gcc -c src/capitulo_3/3.1/print-pid.c -o src/capitulo_3/3.1/print-pid2.o
