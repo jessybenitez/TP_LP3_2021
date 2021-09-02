@@ -68,7 +68,7 @@ src/capitulo_2/2.5/temp_file.o: src/capitulo_2/2.5/temp_file.c
 
 #listing2.6
 bin/capitulo_2/2.6/myprog7: src/capitulo_2/2.6/readfile.o
-	gcc src/capitulo_2/2.6/readfile.o -o bin/capitulo_2/2.5/myprog7
+	gcc src/capitulo_2/2.6/readfile.o -o bin/capitulo_2/2.6/myprog7
 
 src/capitulo_2/2.6/readfile.o: src/capitulo_2/2.6/readfile.c
 	gcc -c src/capitulo_2/2.6/readfile.c -o src/capitulo_2/2.6/readfile.o
@@ -102,7 +102,7 @@ src/capitulo_3/3.1/print-pid.o: src/capitulo_3/3.1/print-pid.c
 bin/capitulo_3/3.2/myprog12: src/capitulo_3/3.2/system.o
 	gcc src/capitulo_3/3.2/system.o -o bin/capitulo_3/3.2/myprog12
 
-src/capitulo_3//readfile.o: src/capitulo_3/3.2/system.c
+src/capitulo_3/3.2/readfile.o: src/capitulo_3/3.2/system.c
 	gcc -c src/capitulo_3/3.2/system.c -o src/capitulo_3/3.2/system.o
 
 #listing3.3
@@ -329,3 +329,49 @@ bin/capitulo_5/5.12/myprog44: src/capitulo_5/5.12/socket-inet.o
 
 src/capitulo_5/5.12/socket-inet.o: src/capitulo_5/5.12/socket-inet.c      
 	gcc -c src/capitulo_5/5.12/socket-inet.c -o src/capitulo_5/5.12/socket-inet.o
+
+clean:
+	rm -f *.o src/capitulo_1/1.1/main.o
+	rm -f *.o src/capitulo_1/1.1/reciprocal.o
+	rm -f *.o src/capitulo_2/2.1/main2.o 
+	rm -f *.o src/capitulo_2/2.2/getopt_long.o
+	rm -f *.o src/capitulo_2/2.3/print-env.o 
+	rm -f *.o src/capitulo_2/2.4/client.o
+	rm -f *.o src/capitulo_2/2.5/temp_file.o 
+	rm -f *.o src/capitulo_2/2.6/readfile.o
+	rm -f *.o src/capitulo_2/2.9/tifftest.o 
+	rm -f *.o src/capitulo_3/3.1/print-pid.o
+	rm -f *.o src/capitulo_3/3.2/readfile.o 
+	rm -f *.o src/capitulo_3/3.3/fork.o
+	rm -f *.o src/capitulo_3/3.4/fork-exec.o 
+	rm -f *.o src/capitulo_3/3.5/sigusr1.o
+	rm -f *.o src/capitulo_3/3.6/zombie.o 
+	rm -f *.o src/capitulo_3/3.7/sigchld.o
+	rm -f *.o src/capitulo_4/4.1/thread-create.o 
+	rm -f *.o src/capitulo_4/4.2/thread-create2.o
+	rm -f *.o src/capitulo_4/4.3/revised4.2.o 
+	rm -f *.o src/capitulo_4/4.4/primes.o
+	rm -f *.o src/capitulo_4/4.5/detached.o 
+	rm -f *.o src/capitulo_4/4.6/critical-section.o
+	rm -f *.o src/capitulo_4/4.7/tsd.o 
+	rm -f *.o src/capitulo_4/4.8/cleanup.o
+	rm -f *.o src/capitulo_4/4.9/cxx-exit.o 
+	rm -f *.o src/capitulo_4/4.10/job-queue1.o
+	rm -f *.o src/capitulo_4/4.11/job-queue2.o 
+	rm -f *.o src/capitulo_4/4.12/job-queue3.o
+	rm -f *.o src/capitulo_4/4.13/spin-condvar.o 
+	rm -f *.o src/capitulo_4/4.14/condvar.o
+	rm -f *.o src/capitulo_4/4.15/thread-pid.o 
+	rm -f *.o src/capitulo_5/5.1/shm.o
+	rm -f *.o src/capitulo_5/5.2/sem_all_deall.o 
+	rm -f *.o src/capitulo_5/5.3/sem_init.o
+	rm -f *.o src/capitulo_5/5.4/sem_pv.o 
+	rm -f *.o src/capitulo_5/5.5/mmap-write.o
+	rm -f *.o src/capitulo_5/5.6/mmap-read.o
+	rm -f *.o src/capitulo_5/5.7/pipe.o
+	rm -f *.o src/capitulo_5/5.8/dup2.o 
+	rm -f *.o src/capitulo_5/5.9/popen.o
+	rm -f *.o src/capitulo_5/5.10/socket-server.o
+	rm -f *.o src/capitulo_5/5.11/socket-client.o
+	rm -f *.o src/capitulo_5/5.12/socket-inet.o
+	
