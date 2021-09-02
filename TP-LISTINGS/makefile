@@ -5,7 +5,8 @@ bin/capitulo_2/2.6/myprog7 bin/capitulo_2/2.9/myprog10 \
 bin/capitulo_3/3.1/myprog11 bin/capitulo_3/3.2/myprog12 \
 bin/capitulo_3/3.3/myprog13 bin/capitulo_3/3.4/myprog14\
 bin/capitulo_3/3.5/myprog15 bin/capitulo_3/3.6/myprog16\
-bin/capitulo_3/3.7/myprog17
+bin/capitulo_3/3.7/myprog17 bin/capitulo_4/4.1/myprog18\
+
 
 #listing1.1 1.2 1.3
 bin/capitulo_1/myprog1: src/capitulo_1/1.1/main.o src/capitulo_1/1.1/reciprocal.o
@@ -126,3 +127,10 @@ bin/capitulo_3/3.7/myprog17: src/capitulo_3/3.7/sigchld.o
 
 src/capitulo_3/3.7/sigchld.o: src/capitulo_3/3.7/sigchld.c      
 	gcc -c src/capitulo_3/3.7/sigchld.c -o src/capitulo_3/3.7/sigchld.o
+
+#listing4.1
+bin/capitulo_4/4.1/myprog18: src/capitulo_4/4.1/thread-create.o
+	gcc src/capitulo_4/4.1/thread-create.o -o bin/capitulo_4/4.1/myprog18 -lpthread
+
+src/capitulo_4/4.1/thread-create.o: src/capitulo_4/4.1/thread-create.c      
+	gcc -c src/capitulo_4/4.1/thread-create.c -o src/capitulo_4/4.1/thread-create.o
