@@ -22,14 +22,14 @@ bin/capitulo_5/5.11/myprog43 bin/capitulo_5/5.12/myprog44\
 
 
 #listing1.1 1.2 1.3
-bin/capitulo_1/myprog1: src/capitulo_1/1.1/main.o src/capitulo_1/1.1/reciprocal.o
-	g++ src/capitulo_1/1.1/main.o src/capitulo_1/1.1/reciprocal.o -o bin/capitulo_1/myprog1 
+bin/capitulo_1/myprog1: src/capitulo_1/main.o src/capitulo_1/reciprocal.o
+	g++ src/capitulo_1/main.o src/capitulo_1/reciprocal.o -o bin/capitulo_1/myprog1 
 
-src/capitulo_1/1.1/main.o: src/capitulo_1/1.1/main.c src/capitulo_1/1.1/reciprocal.cpp src/capitulo_1/1.1/reciprocal.hpp
-	gcc -c src/capitulo_1/1.1/main.c -o src/capitulo_1/1.1/main.o
+src/capitulo_1/main.o: src/capitulo_1/main.c src/capitulo_1/reciprocal.cpp src/capitulo_1/reciprocal.hpp
+	gcc -c src/capitulo_1/main.c -o src/capitulo_1/main.o
 	
-src/capitulo_1/1.1/reciprocal.o: src/capitulo_1/1.1/reciprocal.cpp src/capitulo_1/1.1/reciprocal.hpp
-	g++ -c src/capitulo_1/1.1/reciprocal.cpp -o src/capitulo_1/1.1/reciprocal.o
+src/capitulo_1/reciprocal.o: src/capitulo_1/reciprocal.cpp src/capitulo_1/reciprocal.hpp
+	g++ -c src/capitulo_1/reciprocal.cpp -o src/capitulo_1/reciprocal.o
 
 #listing2.1
 bin/capitulo_2/2.1/myprog2: src/capitulo_2/2.1/main2.o
@@ -331,8 +331,8 @@ src/capitulo_5/5.12/socket-inet.o: src/capitulo_5/5.12/socket-inet.c
 	gcc -c src/capitulo_5/5.12/socket-inet.c -o src/capitulo_5/5.12/socket-inet.o
 
 clean:
-	rm -f *.o src/capitulo_1/1.1/main.o
-	rm -f *.o src/capitulo_1/1.1/reciprocal.o
+	rm -f *.o src/capitulo_1/main.o
+	rm -f *.o src/capitulo_1/reciprocal.o
 	rm -f *.o src/capitulo_2/2.1/main2.o 
 	rm -f *.o src/capitulo_2/2.2/getopt_long.o
 	rm -f *.o src/capitulo_2/2.3/print-env.o 
