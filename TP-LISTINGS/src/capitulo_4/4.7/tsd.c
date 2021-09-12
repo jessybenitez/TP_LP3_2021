@@ -19,7 +19,7 @@ void* thread_function(void* args){
 
 	sprintf(thread_log_filename,"thread%d.log",(int) pthread_self());
 	thread_log=fopen(thread_log_filename,"w");
-	pthread_setspecific(thread_log_key,thread_log);
+	pthread_setspecific(thread_log_key, thread_log);
 
 	write_to_thread_log("thread starting.");
 	return NULL;
@@ -33,7 +33,7 @@ int main()
 	pthread_key_create(&thread_log_key,close_thread_log);
 	for (i = 0; i < 5; ++i)
 	{
-		pthread_create(&(threads[i]),NULL,thread_function,NULL);
+		pthread_create(&(threads[i]), NULL, thread_function, NULL);
 	}
 	for (i = 0; i < 5; ++i)
 	{
