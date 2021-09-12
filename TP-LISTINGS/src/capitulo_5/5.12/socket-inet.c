@@ -1,4 +1,3 @@
-/*VER PORQUE LANZA VIOLACION DE SEGMENTO*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <netinet/in.h>
