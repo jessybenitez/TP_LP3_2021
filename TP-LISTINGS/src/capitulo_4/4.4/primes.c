@@ -11,17 +11,15 @@ void* compute_prime(void* arg){
 		int factor;
 		int is_prime=1;
 
-		for(factor=2; factor<candidate;++factor){
-			if (candidate % factor ==0)
-			{
+		for(factor=2; factor<candidate; ++factor){
+			if (candidate % factor ==0){
 				is_prime=0;
 				break;
 			}
-			if(is_prime){
-				if (--n == 0){
-					return (void*) candidate;
-				}
-			}
+		}
+		if(is_prime){
+			if (--n == 0)
+				return (void*) candidate;
 		}
 		++candidate;
 	}
@@ -33,9 +31,9 @@ int main()
 	pthread_t thread;
 	int which_prime=5000;
 	int prime;
-	pthread_create(&thread,NULL,&compute_prime,&which_prime);
-	pthread_join(thread,(void*) &prime);
-	printf("El %dth prime number is %d\n",which_prime,prime );
+	pthread_create(&thread, NULL, &compute_prime, &which_prime);
+	pthread_join(thread, (void*) &prime);
+	printf("El número primo %d es %d\n", which_prime, prime);
 
 	return 0;
 }

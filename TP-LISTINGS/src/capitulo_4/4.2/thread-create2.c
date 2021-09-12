@@ -10,12 +10,11 @@ void* char_print(void* parameters){
 	struct char_print_parms* p=(struct char_print_parms*) parameters;
 	int i;
 
-	for (int i = 0; i < p->count; ++i)
+	for (i = 0; i < p->count; ++i)
 	{
-		fputc(p->character,stderr);
+		fputc(p->character, stderr);
 	}
 	return NULL;
-
 }
 
 int main()
@@ -33,5 +32,10 @@ int main()
 	thread2_args.count=20000;
 	pthread_create(&thread2_id,NULL,&char_print,&thread2_args);
 
+	/*Nos aseguramos que el primer hilo finalice su trabajo*/
+	pthread_join(thread1_id, NULL);
+
+	/*Nos aseguramos que el segundo hilo finalice su trabajo*/
+	pthread_join(thread2_id, NULL);
 	return 0;
 }

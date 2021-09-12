@@ -1,40 +1,24 @@
-//FALTA COMPLETAR
-#include <pthread.h>
+#include<pthread.h>
+#include<stdio.h>
 
 void* thread_function(void* thread_arg){
-	int candidate=2;
-	int n= *((int*) thread_arg);
-
-	while(1){
-		int factor;
-		int is_prime=1;
-		for(factor=2; factor<candidate;++factor){
-			if (candidate % factor ==0)
-			{
-				is_prime=0;
-				break;
-			}
-			if(is_prime){
-				if (--n == 0){
-					return (void*) candidate;
-				}
-			}
-		}
-		++candidate;
-	}
-	return NULL;
+	int i = 0;
+	for(i = 0; i < 10000; i++)
+		printf("Do work here...");
 }
 
 int main()
-{
+{	
+	int i;
 	pthread_attr_t attr;
 	pthread_t thread;
 
 	pthread_attr_init(&attr);
 	pthread_attr_setdetachstate(&attr,PTHREAD_CREATE_DETACHED);
-	pthread_create(&thread,&attr,&thread_function,NULL);
+	pthread_create(&thread, &attr, &thread_function, NULL);
 	pthread_attr_destroy(&attr);
-
+	for(i = 0; i < 1000; i++)
+		printf("Do work here...");
 
 	return 0;
 }
