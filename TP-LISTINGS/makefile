@@ -1,7 +1,8 @@
 all:bin/capitulo_1/myprog1 bin/capitulo_2/2.1/myprog2 \
 bin/capitulo_2/2.2/myprog3 bin/capitulo_2/2.3/myprog4 \
 bin/capitulo_2/2.4/myprog5 bin/capitulo_2/2.5/myprog6 \
-bin/capitulo_2/2.6/myprog7 bin/capitulo_2/2.9/myprog10 \
+bin/capitulo_2/2.6/myprog7 libtest.a\
+bin/capitulo_2/2.8/myprog8 bin/capitulo_2/2.9/myprog10 \
 bin/capitulo_3/3.1/myprog11 bin/capitulo_3/3.2/myprog12 \
 bin/capitulo_3/3.3/myprog13 bin/capitulo_3/3.4/myprog14\
 bin/capitulo_3/3.5/myprog15 bin/capitulo_3/3.6/myprog16\
@@ -94,16 +95,24 @@ bin/capitulo_2/2.6/myprog7: src/capitulo_2/2.6/readfile.o
 src/capitulo_2/2.6/readfile.o: src/capitulo_2/2.6/readfile.c
 	gcc -c src/capitulo_2/2.6/readfile.c -o src/capitulo_2/2.6/readfile.o
 
-#listing2.7
-#myprog8: src/capitulo_2/2.8/app.o src/capitulo_2/2.7/test.o
-#	gcc src/capitulo_2/2.8/app.o src/capitulo_2/2.7/test.o -o myprog8
+#listing2.7-2.8
 
-#src/capitulo_2/2.7/test.o: src/capitulo_2/2.7/test.c src/capitulo_2/2.8/app.c
-#	gcc -c src/capitulo_2/2.7/test.c -o src/capitulo_2/2.7/test.o
+libtest.a: src/capitulo_2/2.7/test.o src/capitulo_2/2.7/test1.o
+	ar cr libtest.a src/capitulo_2/2.7/test.o src/capitulo_2/2.7/test1.o
 
-#src/capitulo_2/2.8/app.o: src/capitulo_2/2.8/app.c src/capitulo_2/2.7/test.
-#	gcc -c src/capitulo_2/2.8/app.c -o src/capitulo_2/2.8/app.o
+src/capitulo_2/2.7/test.o: src/capitulo_2/2.7/test.c
+	gcc -c src/capitulo_2/2.7/test.c -o src/capitulo_2/2.7/test.o
 
+src/capitulo_2/2.7/test1.o: src/capitulo_2/2.7/test1.c
+	gcc -c src/capitulo_2/2.7/test1.c -o src/capitulo_2/2.7/test1.o
+
+listing-2.8:bin/capitulo_2/2.8/myprog8
+
+bin/capitulo_2/2.8/myprog8: src/capitulo_2/2.8/app.o libtest.a
+	gcc src/capitulo_2/2.8/app.o -o bin/capitulo_2/2.8/myprog8 -L. -ltest
+
+src/capitulo_2/2.8/app.o: src/capitulo_2/2.8/app.c libtest.a
+	gcc -c src/capitulo_2/2.8/app.c -o src/capitulo_2/2.8/app.o -L. -ltest
 
 #listing2.9
 
@@ -462,7 +471,8 @@ clean:
 	rm bin/capitulo_2/2.3/myprog4
 	rm bin/capitulo_2/2.4/myprog5
 	rm bin/capitulo_2/2.5/myprog6
-	rm bin/capitulo_2/2.6/myprog7 
+	rm bin/capitulo_2/2.6/myprog7
+	rm bin/capitulo_2/2.8/myprog8
 	rm bin/capitulo_2/2.9/myprog10
 	rm bin/capitulo_3/3.1/myprog11
 	rm bin/capitulo_3/3.2/myprog12
