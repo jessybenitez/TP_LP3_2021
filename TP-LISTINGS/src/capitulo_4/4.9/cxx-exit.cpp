@@ -1,26 +1,21 @@
-/*FALTA COMPLETAR FUNCION SHOULD _EXIT_THREAD_IMMEDIATELY*/
+#include<cstdio>
+#include<iostream>
+#include<unistd.h>
 #include <pthread.h>
+extern bool should_exit_thread_immediately(){return true;};
 
-class ThreadExitException
-{
+class ThreadExitException{
 public:
 	ThreadExitException(void* return_value)
-	: thread_return_value_(return_value)
-{
-}
+		: thread_return_value_(return_value) {}
 
-void* DoThreadExit(){
-	pthread_exit(thread_return_value_);
-}
+	void* DoThreadExit(){
+		pthread_exit(thread_return_value_);
+	}
 
 private:
 	void* thread_return_value_;
 };
-
-int should_exit_thread_immediately(){
-	/*FALTA COMPLETAR FUNCION*/
-	return 0;
-}
 
 void do_some_work(){
 	while(1){
@@ -44,8 +39,7 @@ void* thread_function(void*){
 int main()
 {
 	pthread_t thread;
-
-	pthread_create(&thread,NULL,thread_function,NULL);
-
+	pthread_create(&thread, NULL, &thread_function, NULL);
+	pthread_join(thread, NULL);
 	return 0;
 }

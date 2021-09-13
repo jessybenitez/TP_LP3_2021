@@ -2,6 +2,7 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/types.h>
+#include <stdio.h>
 
 union semun{
 	int val;
@@ -20,6 +21,10 @@ int binary_semaphore_deallocate(int semid){
 }
 
 int main(){
-	/*completar*/
-	return 0;
+	
+	key_t key;
+	int k = binary_semaphore_allocation(key, 1);
+	printf("El id del semáforo es: %d\n", k);
+	binary_semaphore_deallocate(k);
+	return 0;	
 }
